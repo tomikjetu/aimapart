@@ -1,0 +1,30 @@
+name: AIMapArt
+version: 1.1.0
+description: Using the Stable Diffusion AI in minecraft
+author: tomikjetu
+api-version: 1.19
+
+main: tomikjetu.AiMapArt.AiMapArt
+
+commands:
+  aimapart:
+    description: Ai Map Art Generation
+    aliases:
+      - ai
+      - aiart
+      - mapart
+      - prompt
+
+permissions:
+  aimapart.help:
+    default: true
+    description: Allows the help command
+  aimapart.prompt:
+    default: false
+    description: Allows map art generation
+  aimapart.*:
+    default: op
+    children:
+      - aimapart.help
+      - aimapart.prompt
+    description: Gives permissions for the whole plugin
